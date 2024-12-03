@@ -24,9 +24,9 @@ const User = mongoose.model('User', userSchema);
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  serverSelectionTimeoutMS: 15000, // Increase server selection timeout
-  socketTimeoutMS: 45000, // Increase socket timeout
-  connectTimeoutMS: 30000
+  serverSelectionTimeoutMS: 45000, // Increase server selection timeout
+  socketTimeoutMS: 95000, // Increase socket timeout
+  connectTimeoutMS: 100000
   
 })
 .then(() => console.log('MongoDB connected successfully'))
