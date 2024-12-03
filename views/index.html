@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Details Registration</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>User Registration</h2>
+    <form id="userDetailsForm" action="/submit-details" method="POST">
+      <div>
+        <input type="text" name="fullName" placeholder="Full Name" required>
+        <div id="fullNameError" class="error"></div>
+      </div>
+      
+      <div>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <div id="emailError" class="error"></div>
+      </div>
+      
+      <div>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <div id="phoneError" class="error"></div>
+      </div>
+      
+      <div>
+        <label>Birthdate:</label>
+        <input type="date" name="birthdate">
+      </div>
+      
+      <button type="submit">Submit Details</button>
+    </form>
+  </div>
 
+  <script src="/js/validation.js"></script>
+</body>
+</html>
